@@ -7,11 +7,11 @@
 
 <p align="left"> <a href="https://twitter.com/your-twitter-handle" target="blank"><img src="https://img.shields.io/twitter/follow/your-twitter-handle?logo=twitter&style=for-the-badge" alt="your-twitter-handle" /></a> </p>
 
-- 🔭 I’m currently working with **ORANGE GROUP**
+- 🔭 I’m currently working with **Devoteam Carrefour Group**
   
 - 🌱 I’m currently learning **DevOps and Cloud technologies**
   
-- 💬 Ask me about **DEV, Cloud, Linux, Blockchain, AI, and Cryptocurrency**
+- 💬 Ask me about **DEV, Cloud, Azure, GCP, Terraform Linux, Blockchain, AI, and Cryptocurrency**
 
 - 📫 How to reach me **moez.hachicha@enis.tn**
 
