@@ -1,39 +1,105 @@
-/* Couleurs professionnelles basées sur votre CV LaTeX */
-header {
-    background: #004f90 !important; /* Bleu Primaire */
-    color: white !important;
+:root {
+    --primary: #004f90;
+    --dark: #1a1a1a;
+    --light: #f4f7f6;
+    --accent: #00c6ff;
 }
 
-hr.star-light:after {
-    background-color: #004f90 !important;
-    color: white !important;
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
 }
 
-.custom-icon {
-    font-size: 5em;
-    color: #004f90;
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+.navbar-brand { font-weight: 700; color: var(--primary) !important; font-size: 24px; }
+.navbar-brand span { color: var(--accent); }
+.navbar-nav li a { color: var(--dark) !important; font-weight: 600; }
+
+/* Header */
+.main-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #002d52 100%);
+    color: white;
+    padding: 160px 0 100px;
+}
+.name { font-size: 5rem; font-weight: 800; margin-bottom: 10px; }
+.main-skills { font-size: 1.8rem; opacity: 0.9; font-weight: 300; }
+.header-contact { margin: 20px 0; font-size: 1.1rem; }
+.header-contact span { margin: 0 15px; }
+
+/* Expertise Cards */
+.expertise-card {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    margin-bottom: 30px;
+    border-bottom: 3px solid transparent;
+}
+.expertise-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid var(--accent);
+}
+.icon-gradient {
+    font-size: 50px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
 
-.exp-box {
-    border-left: 4px solid #004f90;
-    padding: 10px 20px;
-    margin-bottom: 25px;
-    background: #f9f9f9;
+/* Timeline/Experience */
+.timeline-item {
+    background: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.date { font-weight: 700; color: var(--primary); display: block; }
+.role { color: var(--accent); font-weight: 600; font-size: 1.1rem; }
+.details-list { padding-left: 20px; margin-top: 10px; }
+
+/* Education */
+.edu-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+.edu-badge {
+    background: var(--primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
 }
 
-.btn-outline {
-    color: white !important;
-    border: 2px solid white !important;
-    background: transparent !important;
+/* Buttons */
+.btn-download {
+    background: var(--accent);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-top: 20px;
 }
+.btn-download:hover { background: white; color: var(--primary); transform: scale(1.05); }
 
-.btn-outline:hover {
-    background: white !important;
-    color: #004f90 !important;
-}
-
-/* Gestion multi-langue */
-[data-lang] {
-    display: none;
-}
+/* Global Utils */
+.section-padding { padding: 80px 0; }
+.section-title { font-weight: 800; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary); }
+.bg-light { background-color: var(--light); }
+[data-lang] { display: none; }
