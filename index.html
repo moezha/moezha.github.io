@@ -4,160 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moez Hachicha | Senior Cloud Integration Engineer</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body id="page-top">
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#page-top">MH<span>.IO</span></a>
+                <a class="navbar-brand" href="#page-top">MOEZ<span>.HA</span></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="javascript:void(0)" onclick="setLanguage('fr')">🇫🇷 FR</a></li>
-                    <li><a href="javascript:void(0)" onclick="setLanguage('en')">🇺🇸 EN</a></li>
-                    <li><a href="javascript:void(0)" onclick="setLanguage('de')">🇩🇪 DE</a></li>
+                    <li><a href="javascript:void(0)" onclick="setLanguage('fr')">FR</a></li>
+                    <li><a href="javascript:void(0)" onclick="setLanguage('en')">EN</a></li>
+                    <li><a href="javascript:void(0)" onclick="setLanguage('de')">DE</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="main-header">
+    <header class="hero">
         <div class="container text-center">
-            <h1 class="name">Moez Hachicha</h1>
-            <p class="main-skills">
+            <h1 class="fade-in">Moez Hachicha</h1>
+            <p class="subtitle">
                 <span data-lang="fr">Ingénieur Intégration Cloud Senior | Expert GCP & DevOps</span>
                 <span data-lang="en">Senior Cloud Integration Engineer | GCP & DevOps Expert</span>
                 <span data-lang="de">Senior Cloud Integration Engineer | GCP & DevOps Experte</span>
             </p>
-            <div class="header-contact">
+            <div class="contact-info">
                 <span><i class="fa fa-map-marker"></i> Sfax, Tunisia</span>
                 <span><i class="fa fa-whatsapp"></i> +49 177 1805599</span>
             </div>
-            <div class="download-area">
-                <a id="downloadBtn" href="#" class="btn btn-download">
-                    <i class="fa fa-download"></i>
-                    <span data-lang="fr">Télécharger mon CV</span>
-                    <span data-lang="en">Download my CV</span>
-                    <span data-lang="de">Meinen CV Herunterladen</span>
-                </a>
-            </div>
+            <a id="downloadBtn" href="#" class="btn btn-cta">
+                <i class="fa fa-download"></i>
+                <span data-lang="fr">Télécharger CV</span>
+                <span data-lang="en">Download CV</span>
+                <span data-lang="de">CV Herunterladen</span>
+            </a>
         </div>
     </header>
 
-    <section id="expertise" class="section-padding">
+    <section id="expertise" class="py-5">
         <div class="container">
-            <h2 class="section-title text-center">Expertise</h2>
-            <div class="row text-center">
+            <h2 class="title-center">Expertise</h2>
+            <div class="row">
                 <div class="col-md-4">
-                    <div class="expertise-card">
-                        <i class="fa fa-cloud icon-gradient"></i>
+                    <div class="skill-card">
+                        <i class="fa fa-cloud"></i>
                         <h3>Cloud & IaC</h3>
-                        <p>GCP (GKE, Cloud Run, Workflows), Azure, Terraform, Ansible, Helm.</p>
+                        <p>GCP (GKE, Cloud Run), Azure, Terraform, Ansible, Helm.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="expertise-card">
-                        <i class="fa fa-cogs icon-gradient"></i>
+                    <div class="skill-card">
+                        <i class="fa fa-terminal"></i>
                         <h3>DevOps</h3>
                         <p>GitLab CI, Jenkins, Docker, Kubernetes, HashiCorp Vault.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="expertise-card">
-                        <i class="fa fa-code icon-gradient"></i>
+                    <div class="skill-card">
+                        <i class="fa fa-code"></i>
                         <h3 data-lang="fr">Développement</h3><h3 data-lang="en">Development</h3><h3 data-lang="de">Entwicklung</h3>
-                        <p>Python, Node.js, React.js, Java Spring Boot, Kafka.</p>
+                        <p>Python, Node.js, React, Java Spring Boot, Kafka.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="career" class="section-padding bg-light">
+    <section id="career" class="py-5 bg-grey">
         <div class="container">
-            <h2 class="section-title text-center"><span data-lang="fr">Expériences</span><span data-lang="en">Experience</span><span data-lang="de">Erfahrung</span></h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="date">2025 - <span data-lang="fr">Présent</span><span data-lang="en">Present</span><span data-lang="de">Heute</span></span>
-                    <h3>Devoteam (Client: Carrefour)</h3>
-                    <p class="role">Senior DevOps Engineer</p>
-                    <ul class="details-list" data-lang="fr">
-                        <li>Administration Azure & GCP, automatisation de 90% via Terraform.</li>
-                        <li>Gestion sécurisée des secrets avec HashiCorp Vault.</li>
-                    </ul>
-                    <ul class="details-list" data-lang="en">
-                        <li>Azure & GCP administration, 90% automation with Terraform modules.</li>
-                        <li>Secure secrets management using HashiCorp Vault.</li>
-                    </ul>
-                    <ul class="details-list" data-lang="de">
-                        <li>Azure & GCP Administration, 90% Automatisierung mit Terraform-Modulen.</li>
-                        <li>Sichere Geheimnisverwaltung mit HashiCorp Vault.</li>
-                    </ul>
+            <h2 class="title-left"><span data-lang="fr">Parcours Professionnel</span><span data-lang="en">Professional Path</span><span data-lang="de">Berufserfahrung</span></h2>
+            <div class="job-item">
+                <div class="job-header">
+                    <h4>Devoteam (Carrefour Group)</h4>
+                    <span class="badge-date">2025 - <span data-lang="fr">Présent</span><span data-lang="en">Present</span><span data-lang="de">Heute</span></span>
                 </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="date">2022 - 2025</span>
-                    <h3>Sofrecom (Client: Orange)</h3>
-                    <p class="role">Software & Cloud Engineer</p>
-                    <ul class="details-list" data-lang="fr">
-                        <li>Design d'architectures scalables sur GKE et Cloud Run.</li>
-                        <li>Orchestration de processus complexes et intégration Vertex AI.</li>
-                    </ul>
-                    <ul class="details-list" data-lang="en">
-                        <li>Designed scalable architectures on GKE and Cloud Run.</li>
-                        <li>Orchestrated complex process chains and Vertex AI integration.</li>
-                    </ul>
-                    <ul class="details-list" data-lang="de">
-                        <li>Design skalierbarer Architekturen auf GKE und Cloud Run.</li>
-                        <li>Orchestrierung komplexer Prozessketten und Vertex AI Integration.</li>
-                    </ul>
-                </div>
+                <p class="job-role">Senior DevOps Engineer</p>
+                <ul class="job-desc" data-lang="fr">
+                    <li>Administration Cloud et automatisation Terraform à 90%.</li>
+                    <li>Réduction de 40% des tâches manuelles via HashiCorp Vault.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section-padding">
-        <div class="container">
-            <h2 class="section-title text-center"><span data-lang="fr">Éducation</span><span data-lang="en">Education</span><span data-lang="de">Bildungsweg</span></h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="edu-card">
-                        <h4>ENIS Sfax</h4>
-                        <p class="degree" data-lang="fr">Diplôme d'Ingénieur en Informatique</p>
-                        <p class="degree" data-lang="en">Engineer's Degree in Computer Science</p>
-                        <p class="degree" data-lang="de">Diplom-Ingenieur in Informatik</p>
-                        <span class="edu-badge">Master Equivalence (ZAB)</span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="edu-card">
-                        <h4>IPEIS Sfax</h4>
-                        <p class="degree" data-lang="fr">Cycle Préparatoire Math-Physique</p>
-                        <p class="degree" data-lang="en">Preparatory Cycle Math-Physics</p>
-                        <p class="degree" data-lang="de">Vorbereitungszyklus Mathematik-Physik</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer text-center">
-        <div class="social-links">
-            <a href="https://linkedin.com/in/moezha"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/moezha"><i class="fa fa-github"></i></a>
-        </div>
-        <p>&copy; 2026 Moez Hachicha | Cloud Integration Expert</p>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
