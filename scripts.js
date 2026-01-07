@@ -1,37 +1,32 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (https://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+// Fonction pour changer la langue et le lien du CV
+function setLanguage(lang) {
+    // Cache tous les éléments data-lang et affiche la langue cible
+    $('[data-lang]').hide();
+    $('[data-lang="' + lang + '"]').show();
+    
+    // Met à jour le lien de téléchargement du CV
+    // Format attendu : CV_MOEZ_2026_DEVOPS_FR.pdf
+    var fileName = "CV_MOEZ_2026_DEVOPS_" + lang.toUpperCase() + ".pdf";
+    $('#downloadBtn').attr('href', fileName);
+    
+    // Sauvegarde la préférence
+    localStorage.setItem('prefLang', lang);
+}
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('body').on('click', '.page-scroll a', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
-// Floating label headings for the contact form
-$(function() {
-    $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-        $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
-    }).on("focus", ".floating-label-form-group", function() {
-        $(this).addClass("floating-label-form-group-with-focus");
-    }).on("blur", ".floating-label-form-group", function() {
-        $(this).removeClass("floating-label-form-group-with-focus");
-    });
-});
-
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
-
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+// Initialisation au chargement
+$(document).ready(function() {
+    var userLang = navigator.language || navigator.userLanguage;
+    var defaultLang = localStorage.getItem('prefLang');
+    
+    if (!defaultLang) {
+        if (userLang.startsWith('fr')) {
+            defaultLang = 'fr';
+        } else if (userLang.startsWith('de')) {
+            defaultLang = 'de';
+        } else {
+            defaultLang = 'en'; // Par défaut
+        }
+    }
+    
+    setLanguage(defaultLang);
 });

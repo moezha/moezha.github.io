@@ -1,139 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moez Hachicha | Senior Cloud Integration Engineer</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <style>
-        :root {
-            --primary-blue: #004f90;
-            --dark-bg: #0a192f;
-            --accent: #64ffda;
-        }
-
-        body { font-family: 'Source Sans Pro', sans-serif; transition: all 0.3s; }
-
-        /* Navbar Custom */
-        .navbar-custom { background-color: var(--dark-bg); border: none; }
-        .navbar-custom .navbar-nav li a { color: white; font-weight: 700; cursor: pointer; }
-        .lang-btn { font-size: 1.2em; padding: 10px !important; }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-blue) 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-        .name { font-size: 4.5em; font-weight: 700; display: block; }
-        .skills { font-size: 1.5em; color: var(--accent); }
-
-        /* Expertise Cards */
-        section { padding: 60px 0; }
-        .card-expertise {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            transition: 0.3s;
-            border-top: 4px solid var(--primary-blue);
-        }
-        .card-expertise:hover { transform: translateY(-5px); }
-        
-        .experience-item {
-            border-left: 3px solid var(--primary-blue);
-            padding-left: 20px;
-            margin-bottom: 30px;
-        }
-
-        .btn-wa {
-            background: #25d366;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-            text-decoration: none;
-        }
-        .btn-wa:hover { color: white; opacity: 0.9; }
-
-        [data-lang] { display: none; } /* Cacher toutes les langues au départ */
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="page-top" class="index">
 
-    <nav class="navbar navbar-custom navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-color navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <span class="navbar-brand" style="color: var(--accent)">MH.IO</span>
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">MH.IO</a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a onclick="setLanguage('fr')" class="lang-btn">🇫🇷 FR</a></li>
-                <li><a onclick="setLanguage('en')" class="lang-btn">🇺🇸 EN</a></li>
-                <li><a onclick="setLanguage('de')" class="lang-btn">🇩🇪 DE</a></li>
-            </ul>
+
+            <div class="collapse navbar-collapse" id="bs-nav">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="page-scroll"><a href="#expertise">
+                        <span data-lang="fr">Expertise</span><span data-lang="en">Expertise</span><span data-lang="de">Expertise</span>
+                    </a></li>
+                    <li class="page-scroll"><a href="#career">
+                        <span data-lang="fr">Parcours</span><span data-lang="en">Career</span><span data-lang="de">Karriere</span>
+                    </a></li>
+                    <li class="page-scroll"><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)" onclick="setLanguage('fr')">🇫🇷 FR</a></li>
+                    <li><a href="javascript:void(0)" onclick="setLanguage('en')">🇺🇸 EN</a></li>
+                    <li><a href="javascript:void(0)" onclick="setLanguage('de')">🇩🇪 DE</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <header>
-        <div class="container animate__animated animate__fadeIn">
-            <span class="name">Moez Hachicha</span>
-            
-            <div data-lang="en" class="skills">Senior Cloud Integration Engineer</div>
-            <div data-lang="fr" class="skills">Ingénieur Intégration Cloud Senior</div>
-            <div data-lang="de" class="skills">Senior Cloud Integration Engineer</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">Moez Hachicha</span>
+                        <hr class="star-light">
+                        <span class="skills">
+                            <span data-lang="fr">Ingénieur Intégration Cloud Senior | Expert GCP & DevOps</span>
+                            <span data-lang="en">Senior Cloud Integration Engineer | GCP & DevOps Expert</span>
+                            <span data-lang="de">Senior Cloud Integration Engineer | GCP & DevOps Experte</span>
+                        </span>
+                        <p style="margin-top:20px; font-size: 1.2em;">
+                            <i class="fa fa-map-marker"></i> Sfax, Tunisia | 
+                            <a href="https://wa.me/491771805599" style="color:inherit; text-decoration:none;">
+                                <i class="fa fa-whatsapp"></i> +49 177 1805599
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <p class="lead" style="max-width: 800px; margin: 20px auto;">
-                <span data-lang="en">GCP & DevOps Specialist based in Sfax, Tunisia.</span>
-                <span data-lang="fr">Spécialiste GCP & DevOps basé à Sfax, Tunisie.</span>
-                <span data-lang="de">GCP & DevOps Spezialist in Sfax, Tunesien.</span>
-            </p>
-
-            <a href="https://wa.me/491771805599" class="btn-wa">
-                <i class="fa fa-whatsapp"></i> WhatsApp: +49 177 1805599
-            </a>
+            <div class="row" style="margin-top: 40px;">
+                <div class="seeMore-btn text-center btn-style">
+                    <div class="btn-styleLine double-line">
+                        <a id="downloadBtn" href="#" class="btn btn-lg btn-outline" target="_blank">
+                            <i class="fa fa-fw fa-download"></i>
+                            <span data-lang="fr">Télécharger le CV (FR)</span>
+                            <span data-lang="en">Download CV (EN)</span>
+                            <span data-lang="de">CV Herunterladen (DE)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <section id="expertise">
-        <div class="container">
+        <div class="container text-center">
+            <h2 data-lang="fr">Expertise</h2><h2 data-lang="en">Expertise</h2><h2 data-lang="de">Expertise</h2>
+            <hr class="star-primary">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card-expertise">
-                        <i class="fa fa-cloud fa-2x"></i>
-                        <h3 data-lang="en">Cloud & Orchestration</h3>
-                        <h3 data-lang="fr">Cloud & Orchestration</h3>
-                        <h3 data-lang="de">Cloud & Orchestrierung</h3>
-                        <p>GCP (GKE, Cloud Run, Workflows), Terraform, Ansible, Helm, Azure.</p>
-                    </div>
+                <div class="col-sm-4 portfolio-item">
+                    <span class="fa fa-cloud custom-icon"></span>
+                    <h3>Cloud & IaC</h3>
+                    <p>GCP (GKE, Cloud Run, Workflows), Azure, Terraform, Ansible, Helm.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-expertise">
-                        <i class="fa fa-gears fa-2x"></i>
-                        <h3 data-lang="en">DevOps CI/CD</h3>
-                        <h3 data-lang="fr">DevOps CI/CD</h3>
-                        <h3 data-lang="de">DevOps CI/CD</h3>
-                        <p>GitLab CI, Jenkins, Docker, Kubernetes, HashiCorp Vault.</p>
-                    </div>
+                <div class="col-sm-4 portfolio-item">
+                    <span class="fa fa-gears custom-icon"></span>
+                    <h3>DevOps</h3>
+                    <p>GitLab CI, Jenkins, Docker, Kubernetes, HashiCorp Vault.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-expertise">
-                        <i class="fa fa-code fa-2x"></i>
-                        <h3 data-lang="en">Development</h3>
-                        <h3 data-lang="fr">Développement</h3>
-                        <h3 data-lang="de">Entwicklung</h3>
-                        <p>Python, Node.js, React.js, Java Spring Boot, Kafka.</p>
-                    </div>
+                <div class="col-sm-4 portfolio-item">
+                    <span class="fa fa-code custom-icon"></span>
+                    <h3 data-lang="fr">Développement</h3><h3 data-lang="en">Development</h3><h3 data-lang="de">Entwicklung</h3>
+                    <p>Python, Node.js, React.js, Java Spring Boot, Kafka.</p>
                 </div>
             </div>
         </div>
@@ -141,66 +104,40 @@
 
     <section id="career" class="bg-light">
         <div class="container">
-            <h2 data-lang="en">Experience</h2>
-            <h2 data-lang="fr">Expérience</h2>
-            <h2 data-lang="de">Berufserfahrung</h2>
-            <hr>
-
-            <div class="experience-item">
-                <h4><strong>Devoteam (Carrefour)</strong> | 2025 - Present</h4>
-                <p data-lang="en">Senior DevOps Engineer. Infrastructure automation with Terraform and Azure/GCP.</p>
-                <p data-lang="fr">Ingénieur DevOps Senior. Automatisation d'infrastructure avec Terraform et Azure/GCP.</p>
-                <p data-lang="de">Senior DevOps Engineer. Infrastruktur-Automatisierung mit Terraform und Azure/GCP.</p>
-            </div>
-
-            <div class="experience-item">
-                <h4><strong>Sofrecom (Orange)</strong> | 2022 - 2025</h4>
-                <p data-lang="en">Software & Cloud Engineer. Scalable architectures on GKE and Cloud Run.</p>
-                <p data-lang="fr">Ingénieur Cloud & Logiciel. Architectures scalables sur GKE et Cloud Run.</p>
-                <p data-lang="de">Software & Cloud Engineer. Skalierbare Architekturen auf GKE und Cloud Run.</p>
+            <h2 class="text-center" data-lang="fr">Expérience</h2>
+            <h2 class="text-center" data-lang="en">Experience</h2>
+            <h2 class="text-center" data-lang="de">Berufserfahrung</h2>
+            <hr class="star-primary">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="exp-box">
+                        <h4><strong>Devoteam (Carrefour)</strong> <span class="pull-right">2025 - Present</span></h4>
+                        <p data-lang="fr">Senior DevOps Engineer. Administration Azure & GCP, automatisation Terraform.</p>
+                        <p data-lang="en">Senior DevOps Engineer. Azure & GCP administration, Terraform automation.</p>
+                        <p data-lang="de">Senior DevOps Engineer. Azure & GCP Administration, Terraform Automatisierung.</p>
+                    </div>
+                    <div class="exp-box">
+                        <h4><strong>Sofrecom (Orange)</strong> <span class="pull-right">2022 - 2025</span></h4>
+                        <p data-lang="fr">Software & Cloud Engineer. Architectures scalables sur GKE et Cloud Run.</p>
+                        <p data-lang="en">Software & Cloud Engineer. Scalable architectures on GKE and Cloud Run.</p>
+                        <p data-lang="de">Software & Cloud Engineer. Skalierbare Architekturen auf GKE und Cloud Run.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="text-center" style="padding: 40px; background: var(--dark-bg); color: white;">
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/moezha" style="color: white; font-size: 2em; margin: 10px;"><i class="fa fa-linkedin"></i></a>
-            <a href="mailto:moez.hachicha@enis.tn" style="color: white; font-size: 2em; margin: 10px;"><i class="fa fa-envelope"></i></a>
+    <footer class="text-center" style="background:#212121; color:white; padding:40px 0;">
+        <div class="container">
+            <a href="https://linkedin.com/in/moezha" class="btn-social btn-outline"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/moezha" class="btn-social btn-outline"><i class="fa fa-github"></i></a>
+            <p style="margin-top:20px;">&copy; 2026 Moez Hachicha | Sfax, Tunisia</p>
         </div>
-        <p>&copy; 2026 Moez Hachicha | Sfax, Tunisia</p>
     </footer>
 
-    <script>
-        // Détection automatique de la langue
-        function detectLanguage() {
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('fr')) return 'fr';
-            if (userLang.startsWith('de')) return 'de';
-            return 'en'; // Par défaut
-        }
-
-        // Appliquer la langue choisie
-        function setLanguage(lang) {
-            // Cacher tous les éléments ayant l'attribut data-lang
-            document.querySelectorAll('[data-lang]').forEach(el => {
-                el.style.display = 'none';
-            });
-            // Afficher uniquement ceux de la langue sélectionnée
-            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
-                el.style.display = 'block';
-                // Si c'est un span ou un titre inline, on utilise 'inline-block' ou 'inline'
-                if(el.tagName === 'SPAN') el.style.display = 'inline';
-            });
-            // Sauvegarder le choix
-            localStorage.setItem('preferredLang', lang);
-        }
-
-        // Au chargement de la page
-        window.onload = () => {
-            const savedLang = localStorage.getItem('preferredLang');
-            const defaultLang = savedLang || detectLanguage();
-            setLanguage(defaultLang);
-        };
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
