@@ -4,538 +4,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Moez Hachicha - DevOps Engineer with 3+ years experience in cloud infrastructure, CI/CD, and software development">
-    <meta name="author" content="Moez Hachicha">
-    <title>Moez Hachicha CV</title>
+    <title>Moez Hachicha | Senior Cloud Integration Engineer</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --primary-blue: #004f90;
+            --dark-bg: #0a192f;
+            --accent: #64ffda;
+        }
+
+        body { font-family: 'Source Sans Pro', sans-serif; transition: all 0.3s; }
+
+        /* Navbar Custom */
+        .navbar-custom { background-color: var(--dark-bg); border: none; }
+        .navbar-custom .navbar-nav li a { color: white; font-weight: 700; cursor: pointer; }
+        .lang-btn { font-size: 1.2em; padding: 10px !important; }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .name { font-size: 4.5em; font-weight: 700; display: block; }
+        .skills { font-size: 1.5em; color: var(--accent); }
+
+        /* Expertise Cards */
+        section { padding: 60px 0; }
+        .card-expertise {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: 0.3s;
+            border-top: 4px solid var(--primary-blue);
+        }
+        .card-expertise:hover { transform: translateY(-5px); }
+        
+        .experience-item {
+            border-left: 3px solid var(--primary-blue);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn-wa {
+            background: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .btn-wa:hover { color: white; opacity: 0.9; }
+
+        [data-lang] { display: none; } /* Cacher toutes les langues au départ */
+    </style>
 </head>
 
-<body id="page-top" class="index">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-color navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+<body>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="page-scroll"><a href="#page-top">Home</a></li>
-                    <li class="page-scroll"><a href="#whatido">What I Do</a></li>
-                    <li class="page-scroll"><a href="#career">Career</a></li>
-                    <li class="page-scroll"><a href="#certifications">Certifications</a></li>
-                    <li class="page-scroll"><a href="#languages">Languages</a></li>
-                    <li class="page-scroll"><a href="#contact">Contact</a></li>
-                </ul>
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <span class="navbar-brand" style="color: var(--accent)">MH.IO</span>
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="setLanguage('fr')" class="lang-btn">🇫🇷 FR</a></li>
+                <li><a onclick="setLanguage('en')" class="lang-btn">🇺🇸 EN</a></li>
+                <li><a onclick="setLanguage('de')" class="lang-btn">🇩🇪 DE</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-text">
-                        <span class="name">Moez Hachicha</span>
-                        <span class="skills">DevOps Engineer | Software Developer</span>
-                        <hr class="star-light">
-                        <p>
-                            I am a DevOps Engineer with over 3 years of experience in automating and managing cloud infrastructures and implementing modern CI/CD pipelines. I have hands-on experience with GitLab CI, Jenkins, Ansible, and Terraform, building Infrastructure as Code (IaC) and reusable modules for GCP (GKE, Cloud Run, IAM, Firewall, WIF) and Azure (VMs, Resource Groups, NSG, ASG).
-                            <br><br>
-                            In addition to my DevOps expertise, I bring strong software development skills in JavaScript, Python, LLM models, and React.js.
-                            <br><br>
-                            I have collaborated with major international clients, including Orange Group and Carrefour Group.
-                        </p>
-                    </div>
-                    <img class="img-responsive img-bigScreen"
-                        src="https://res.cloudinary.com/dasdezine/image/upload/v1458052055/glass_cdjbpa.png"
-                        alt="glasses image" title="geek loves glasses">
-                </div>
-            </div>
-            <div class="seeMore-btn text-center btn-style">
-                <div class="btn-styleLine double-line page-scroll">
-                    <a href="#whatido" class="btn btn-lg btn-outline">
-                        <i class="fa fa-fw fa-arrow-circle-down"></i>See More
-                    </a>
-                </div>
-            </div>
+        <div class="container animate__animated animate__fadeIn">
+            <span class="name">Moez Hachicha</span>
+            
+            <div data-lang="en" class="skills">Senior Cloud Integration Engineer</div>
+            <div data-lang="fr" class="skills">Ingénieur Intégration Cloud Senior</div>
+            <div data-lang="de" class="skills">Senior Cloud Integration Engineer</div>
+
+            <p class="lead" style="max-width: 800px; margin: 20px auto;">
+                <span data-lang="en">GCP & DevOps Specialist based in Sfax, Tunisia.</span>
+                <span data-lang="fr">Spécialiste GCP & DevOps basé à Sfax, Tunisie.</span>
+                <span data-lang="de">GCP & DevOps Spezialist in Sfax, Tunesien.</span>
+            </p>
+
+            <a href="https://wa.me/491771805599" class="btn-wa">
+                <i class="fa fa-whatsapp"></i> WhatsApp: +49 177 1805599
+            </a>
         </div>
     </header>
 
-    <!-- What I Do Section -->
-    <section id="whatido">
+    <section id="expertise">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>What I Do</h2>
-                    <hr class="star-primary">
+                <div class="col-md-4">
+                    <div class="card-expertise">
+                        <i class="fa fa-cloud fa-2x"></i>
+                        <h3 data-lang="en">Cloud & Orchestration</h3>
+                        <h3 data-lang="fr">Cloud & Orchestration</h3>
+                        <h3 data-lang="de">Cloud & Orchestrierung</h3>
+                        <p>GCP (GKE, Cloud Run, Workflows), Terraform, Ansible, Helm, Azure.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#" class="portfolio-link text-center" data-toggle="modal">
-                        <span class="fa fa-fw fa-cloud" aria-hidden="true"
-                            title="DevOps & Cloud Infrastructure"></span>
-                    </a>
-                    <article class="portfolio-item-One">
-                        <header>
-                            <h3>DevOps & Cloud</h3>
-                        </header>
-                        <p>
-                            Specialized in CI/CD automation with <strong>GitLab CI</strong> and <strong>Jenkins</strong>. 
-                            Expert in infrastructure as code using <strong>Terraform</strong> and <strong>Ansible</strong>. 
-                            Managing cloud platforms: <strong>GCP</strong> (GKE, Cloud Run, IAM) and <strong>Azure</strong> (VMs, NSG, ASG).
-                            Proficient in <strong>Docker</strong>, <strong>Kubernetes</strong>, <strong>Helm</strong>, and <strong>Vault</strong>.
-                        </p>
-                    </article>
+                <div class="col-md-4">
+                    <div class="card-expertise">
+                        <i class="fa fa-gears fa-2x"></i>
+                        <h3 data-lang="en">DevOps CI/CD</h3>
+                        <h3 data-lang="fr">DevOps CI/CD</h3>
+                        <h3 data-lang="de">DevOps CI/CD</h3>
+                        <p>GitLab CI, Jenkins, Docker, Kubernetes, HashiCorp Vault.</p>
+                    </div>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#" class="portfolio-link text-center" data-toggle="modal">
-                        <span class="fa fa-fw fa-cogs" aria-hidden="true"
-                            title="Backend Development"></span>
-                    </a>
-                    <article class="portfolio-item-Two">
-                        <header>
-                            <h3>Backend Development</h3>
-                        </header>
-                        <p>
-                            Proficient in backend development, specializing in <strong>Node.js</strong>,
-                            <strong>TypeScript</strong>, and <strong>JavaScript</strong>. Also experienced in
-                            <strong>Python</strong> and previously worked with <strong>Java</strong> and <strong>Spring
-                                Boot</strong>. Experience with LLM models and AI integration.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#" class="portfolio-link text-center" data-toggle="modal">
-                        <span class="fa fa-fw fa-laptop" aria-hidden="true"
-                            title="Frontend Development"></span>
-                    </a>
-                    <article class="portfolio-item-Three">
-                        <header>
-                            <h3>Frontend Development</h3>
-                        </header>
-                        <p>
-                            Front-End Developer with expertise in creating intuitive web applications.
-                            Skilled in using technologies such as <strong>React.js</strong>. Also experienced
-                            with <strong>Angular</strong> and modern frontend frameworks.
-                        </p>
-                    </article>
+                <div class="col-md-4">
+                    <div class="card-expertise">
+                        <i class="fa fa-code fa-2x"></i>
+                        <h3 data-lang="en">Development</h3>
+                        <h3 data-lang="fr">Développement</h3>
+                        <h3 data-lang="de">Entwicklung</h3>
+                        <p>Python, Node.js, React.js, Java Spring Boot, Kafka.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div>
-        <hr class="loc-hr">
-    </div>
-
-    <!-- Career Section -->
     <section id="career" class="bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Professional Experience</h2>
-                    <hr class="primary">
-                </div>
+            <h2 data-lang="en">Experience</h2>
+            <h2 data-lang="fr">Expérience</h2>
+            <h2 data-lang="de">Berufserfahrung</h2>
+            <hr>
+
+            <div class="experience-item">
+                <h4><strong>Devoteam (Carrefour)</strong> | 2025 - Present</h4>
+                <p data-lang="en">Senior DevOps Engineer. Infrastructure automation with Terraform and Azure/GCP.</p>
+                <p data-lang="fr">Ingénieur DevOps Senior. Automatisation d'infrastructure avec Terraform et Azure/GCP.</p>
+                <p data-lang="de">Senior DevOps Engineer. Infrastruktur-Automatisierung mit Terraform und Azure/GCP.</p>
             </div>
 
-            <!-- Devoteam Experience -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>
-                        Devoteam (Client: Carrefour Group), DevOps Engineer (Run, Production)
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#devoteamModal">Details</button>
-                    </h3>
-                    <h4>SFAX, TUNISIA | Sept 2025 - Present</h4>
-                </div>
-            </div>
-
-            <!-- Modal for Devoteam -->
-            <div class="modal fade" id="devoteamModal" tabindex="-1" role="dialog" aria-labelledby="devoteamModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="devoteamModalLabel">Experience at Devoteam - Carrefour Group</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>Key Responsibilities</h4>
-                            <ul>
-                                <li>Worked on Carrefour's IO and Transport modules</li>
-                                <li>Implemented and automated processes with Jenkins, GitLab CI, and Ansible</li>
-                                <li>Managed and configured Vault for secrets management</li>
-                                <li>Administered Azure infrastructures: virtual machines, Resource Groups, NSG, ASG</li>
-                                <li>Administered and troubleshooted Linux and Windows servers</li>
-                                <li>Deployed Linux and Windows virtual machines on Azure using Terraform</li>
-                            </ul>
-                            <h4>Technologies Used</h4>
-                            <p>Jenkins, GitLab CI, Ansible, Terraform, Azure (VMs, Resource Groups, NSG, ASG), Vault, Linux, Windows Server</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sofrecom Experience -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>
-                        Sofrecom (Client: Orange Group), Software and DevOps Engineer
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#sofrecModal">Details</button>
-                    </h3>
-                    <h4>SFAX, TUNISIA | Jan 2022 - Sept 2025 (3 years and 9 months)</h4>
-                </div>
-            </div>
-
-            <!-- Modal for Sofrecom Tunisia -->
-            <div class="modal fade" id="sofrecModal" tabindex="-1" role="dialog" aria-labelledby="sofrecModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="sofrecModalLabel">Experience at Sofrecom - Orange Group</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>Key Responsibilities</h4>
-                            <ul>
-                                <li>Built and maintained CI/CD pipelines with GitLab CI, managing runners in dev and production environments</li>
-                                <li>Managed cloud infrastructure on Google Cloud Platform (GKE, Cloud Run, GCS), including firewall rules, IAM policies, and network security</li>
-                                <li>Automated deployment and infrastructure management with Terraform, including reusable GCP modules (GKE, Cloud Run, Cloud SQL, Vertex AI)</li>
-                                <li>Containerization with Docker and orchestration with Kubernetes (GKE)</li>
-                                <li>Developed frontend and backend applications using Python, React.js, and Node.js/JavaScript</li>
-                            </ul>
-                            <h4>Notable Projects</h4>
-                            <ul>
-                                <li><strong>Energy Trading Platform:</strong> Implemented frontend/backend with ReactJS/Node.js, RabbitMQ, WebSockets, and Quorum blockchain</li>
-                                <li><strong>Patient Consent Project:</strong> Self-Sovereign Identity using Hyperledger Indy/Aries Agent</li>
-                                <li><strong>AI Smart Contract Tool:</strong> PDF to Smart Contract transformation using OCR and LLAMA 3.1 OLLAMA</li>
-                                <li><strong>Cryptocurrency Price Prediction:</strong> Real-time data collection with WebSockets and ML models using Scikit-learn</li>
-                                <li><strong>SSI Tool for Orange Suppliers:</strong> Identity management system using SSI/Didkit and Python</li>
-                                <li><strong>Smart Contract Vulnerability Evaluation:</strong> AI-driven tool using LLAMA3/Gemma2/Mistral with automated testing</li>
-                                <li><strong>NFT Marketplace:</strong> ERC721 marketplace with ESP32 integration for physical assets</li>
-                            </ul>
-                            <h4>Technologies Used</h4>
-                            <p>Python, React.js, Node.js, Docker, Kubernetes, Terraform, Helm, GitLab CI, GCP (Cloud Run, GCS, IAM, Firewall, Google Cloud SQL, WIF), RabbitMQ, WebSocket, TypeScript, MongoDB, Blockchain, LLM models, Solidity, Linux, Git, Agile</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tech'Up Consulting Experience -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>
-                        TECH'UP CONSULTING, Internship
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#techupModal">Details</button>
-                    </h3>
-                    <h4>Paris, France - Fully Remote | June 2021 - Dec 2021 (6 months)</h4>
-                </div>
-            </div>
-
-            <!-- Modal for Tech'Up Consulting -->
-            <div class="modal fade" id="techupModal" tabindex="-1" role="dialog" aria-labelledby="techupModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="techupModalLabel">Experience at TECH'UP CONSULTING</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>Responsibilities</h4>
-                            <ul>
-                                <li>Conducted quantitative and qualitative analyses of insurance migration data across multiple database structures</li>
-                            </ul>
-                            <h4>Technologies Used</h4>
-                            <p>SpringBoot, Angular, Git, JPA, JDBC, PostgreSQL</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Petroserv Catering Experience -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>
-                        PETROSERV CATERING, Internship
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#petroservModal">Details</button>
-                    </h3>
-                    <h4>Sfax, Tunisia - Fully Remote | June 2021 - Aug 2021 (2 months)</h4>
-                </div>
-            </div>
-
-            <!-- Modal for Petroserv Catering -->
-            <div class="modal fade" id="petroservModal" tabindex="-1" role="dialog"
-                aria-labelledby="petroservModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="petroservModalLabel">Experience at PETROSERV CATERING</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>Responsibilities</h4>
-                            <ul>
-                                <li>Developed a web solution for managing invoices, staff, and administrative tasks for Petroserv Catering</li>
-                            </ul>
-                            <h4>Technologies Used</h4>
-                            <p>SpringBoot, Angular, Git, JPA, JDBC, PostgreSQL, Agile, Trello</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- IOVISION.IO Experience -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>
-                        IOVISION.IO, Internship
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#ioviModal">Details</button>
-                    </h3>
-                    <h4>Sfax, Tunisia | Jan 2021 - June 2021 (5 months)</h4>
-                </div>
-            </div>
-
-            <!-- Modal for IOVISION.IO -->
-            <div class="modal fade" id="ioviModal" tabindex="-1" role="dialog" aria-labelledby="ioviModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="ioviModalLabel">Experience at IOVISION.IO</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>Responsibilities</h4>
-                            <ul>
-                                <li>Developed a mobile application to simplify finding services and products in various areas</li>
-                            </ul>
-                            <h4>Technologies Used</h4>
-                            <p>SpringBoot, Angular, Ionic, Adobe UI, Git, JPA, JDBC, PostgreSQL, Agile, Trello</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Acteol Experience -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>
-                        ACTEOL, Internship
-                        <button type="button" class="btn btn-info" data-toggle="modal"
-                            data-target="#acteolModal">Details</button>
-                    </h3>
-                    <h4>Sfax, Tunisia | June 2020 - Aug 2020 (2 months)</h4>
-                </div>
-            </div>
-
-            <!-- Modal for ACTEOL -->
-            <div class="modal fade" id="acteolModal" tabindex="-1" role="dialog" aria-labelledby="acteolModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="acteolModalLabel">Experience at ACTEOL</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>Responsibilities</h4>
-                            <ul>
-                                <li>Developed a web solution for enterprise management</li>
-                            </ul>
-                            <h4>Technologies Used</h4>
-                            <p>.NET, Angular, Git, PostgreSQL, Agile, Trello</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="experience-item">
+                <h4><strong>Sofrecom (Orange)</strong> | 2022 - 2025</h4>
+                <p data-lang="en">Software & Cloud Engineer. Scalable architectures on GKE and Cloud Run.</p>
+                <p data-lang="fr">Ingénieur Cloud & Logiciel. Architectures scalables sur GKE et Cloud Run.</p>
+                <p data-lang="de">Software & Cloud Engineer. Skalierbare Architekturen auf GKE und Cloud Run.</p>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <h2 class="text-center">Certifications</h2>
-            <hr class="star-primary">
-            <ul class="list-unstyled">
-                <li>
-                    <strong>2024 - COURSERA:</strong> Google Cloud Fundamentals: Core Infrastructure
-                    <br>
-                    <a href="https://coursera.org/share/f2f7852e23bb968bfd69fc9ec8156285" target="_blank"><strong>View Certificate</strong></a>
-                </li>
-                <li>
-                    <strong>2024 - COURSERA:</strong> Google Cloud DevOps Fundamentals
-                    <br>
-                    <a href="https://coursera.org/share/00158049eae5eaa3977ddd998cce9f85" target="_blank"><strong>View Certificate</strong></a>
-                </li>
-                <li>
-                    <strong>2024 - COURSERA:</strong> Containerize a full-stack NodeJS application in Docker
-                    <br>
-                    <a href="https://coursera.org/share/e38240713699af7b0d951f9d4ae48971" target="_blank"><strong>View Certificate</strong></a>
-                </li>
-                <li>
-                    <strong>2024 - COURSERA:</strong> Introduction to Docker: Build Your Own Portfolio Site
-                    <br>
-                    <a href="https://coursera.org/share/a12fb4b68d40c0805564f5d3f59f06a1" target="_blank"><strong>View Certificate</strong></a>
-                </li>
-                <li>
-                    <strong>2024 - COURSERA:</strong> Tracking Cryptocurrency Exchange Trades with Google Cloud Platform in Real-Time
-                    <br>
-                    <a href="https://coursera.org/share/e4086bd1331c2e1919830b056be437f0" target="_blank"><strong>View Certificate</strong></a>
-                </li>
-            </ul>
+    <footer class="text-center" style="padding: 40px; background: var(--dark-bg); color: white;">
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/moezha" style="color: white; font-size: 2em; margin: 10px;"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:moez.hachicha@enis.tn" style="color: white; font-size: 2em; margin: 10px;"><i class="fa fa-envelope"></i></a>
         </div>
-    </section>
-
-    <!-- Languages Section -->
-    <section id="languages">
-        <div class="container">
-            <h2 class="text-center">Languages</h2>
-            <hr class="star-primary">
-            <ul class="list-unstyled">
-                <li><strong>English:</strong> Fluent in speaking, reading, and writing. Skilled in technical documentation and professional communication.</li>
-                <li><strong>German:</strong> Level A2–B1. Good basic reading and writing skills; actively learning further. Basic technical communication knowledge.</li>
-                <li><strong>French:</strong> Native</li>
-                <li><strong>Arabic:</strong> Native</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-        <div class="container">
-            <div class="text-center btn-style double-line">
-                <div class="btn-styleLine">
-                    <a href="resume.pdf" class="btn btn-lg btn-outline" target="_blank">
-                        <i class="fa fa-fw fa-download"></i> Download Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row form-padding">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required
-                                    data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email" id="email" required
-                                    data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required
-                                    data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-default btn-lg">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="success"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container text-center">
-            <p>
-                <a href="https://www.linkedin.com/in/moezha/" target="_blank">
-                    <i class="fa fa-fw fa-linkedin-square"></i>
-                </a>
-                <a href="https://github.com/moezha" target="_blank">
-                    <i class="fa fa-fw fa-github"></i>
-                </a>
-                <a href="https://moezha.github.io" target="_blank">
-                    <i class="fa fa-fw fa-globe"></i>
-                </a>
-                <a href="mailto:moez.hachicha@enis.tn">
-                    <i class="fa fa-fw fa-envelope"></i>
-                </a>
-            </p>
-        </div>
+        <p>&copy; 2026 Moez Hachicha | Sfax, Tunisia</p>
     </footer>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-</body>
+    <script>
+        // Détection automatique de la langue
+        function detectLanguage() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('fr')) return 'fr';
+            if (userLang.startsWith('de')) return 'de';
+            return 'en'; // Par défaut
+        }
 
+        // Appliquer la langue choisie
+        function setLanguage(lang) {
+            // Cacher tous les éléments ayant l'attribut data-lang
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.style.display = 'none';
+            });
+            // Afficher uniquement ceux de la langue sélectionnée
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.style.display = 'block';
+                // Si c'est un span ou un titre inline, on utilise 'inline-block' ou 'inline'
+                if(el.tagName === 'SPAN') el.style.display = 'inline';
+            });
+            // Sauvegarder le choix
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        // Au chargement de la page
+        window.onload = () => {
+            const savedLang = localStorage.getItem('preferredLang');
+            const defaultLang = savedLang || detectLanguage();
+            setLanguage(defaultLang);
+        };
+    </script>
+</body>
 </html>
