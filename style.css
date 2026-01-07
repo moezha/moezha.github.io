@@ -81,3 +81,75 @@ footer { background: #1a1a1a; color: #777; padding: 40px 0; }
 
 /* Lang Logic */
 [data-lang] { display: none; }
+
+/* Container Flex pour aligner les hauteurs de cartes */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edu-card, .cert-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    height: calc(100% - 20px); /* Force la hauteur pleine dans la colonne */
+    transition: 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.edu-card:hover, .cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Style spécifique pour l'icône et le contenu */
+.edu-icon {
+    font-size: 24px;
+    color: var(--main-blue);
+    margin-bottom: 15px;
+}
+
+.edu-content h4, .cert-card h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--main-blue);
+}
+
+.edu-meta {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cert-list li {
+    padding: 8px 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.cert-list i {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Badge ZAB */
+.zab-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 10px;
+}

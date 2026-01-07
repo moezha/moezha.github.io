@@ -5,7 +5,7 @@ function setLanguage(lang) {
     $('[data-lang="' + lang + '"]').show();
     
     // Mettre à jour le nom du fichier CV dynamiquement
-    var fileName = "CV_Moez_2026_DEVOPS_" + lang.toUpperCase() + ".pdf";
+    var fileName = "CV_MOEZ_2026_DEVOPS_" + lang.toUpperCase() + ".pdf";
     $('#downloadBtn').attr('href', fileName);
     
     // Sauvegarder la préférence
