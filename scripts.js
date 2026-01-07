@@ -1,9 +1,18 @@
 function setLanguage(lang) {
-    // 1. Gérer l'affichage des textes
+    // Affiche les éléments de la langue choisie
     $('[data-lang]').hide();
     $('[data-lang="' + lang + '"]').show();
     
-    // 2. Mettre à jour le lien de téléchargement (Ex: CV_MOEZ_2026_DEVOPS_FR.pdf)
+    // Si c'est un span, on utilise display inline
+    $('[data-lang="' + lang + '"]').each(function() {
+        if ($(this).prop("tagName") === "SPAN") {
+            $(this).css("display", "inline");
+        } else {
+            $(this).css("display", "block");
+        }
+    });
+
+    // Mise à jour du lien du CV
     var fileName = "CV_MOEZ_2026_DEVOPS_" + lang.toUpperCase() + ".pdf";
     $('#downloadBtn').attr('href', fileName);
     
@@ -12,7 +21,8 @@ function setLanguage(lang) {
 
 $(document).ready(function() {
     var userLang = navigator.language || navigator.userLanguage;
-    var defaultLang = localStorage.getItem('prefLang') || 
-                     (userLang.startsWith('fr') ? 'fr' : (userLang.startsWith('de') ? 'de' : 'en'));
+    // Anglais par défaut si pas de préférence sauvegardée
+    var defaultLang = localStorage.getItem('prefLang') || 'en'; 
+    
     setLanguage(defaultLang);
 });

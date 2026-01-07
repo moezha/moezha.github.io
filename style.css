@@ -1,72 +1,52 @@
-/* Palette et Reset */
 :root {
-    --main-blue: #004f90;
-    --accent-blue: #00c6ff;
-    --text-dark: #2d3436;
-    --bg-light: #f9f9f9;
+    --primary: #004f90;
+    --accent: #00c6ff;
+    --bg-light: #f8fbfd;
 }
 
-body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: white; margin: 0; }
+body { font-family: 'Inter', sans-serif; color: #333; }
 
-/* Navbar Moderne */
-.navbar { background: white; border-bottom: 1px solid #eee; padding: 10px 0; }
-.navbar-brand { font-weight: 800; color: var(--main-blue) !important; letter-spacing: -1px; }
-.navbar-brand span { color: var(--accent-blue); }
+/* Navbar */
+.navbar { background: #fff; border-bottom: 1px solid #eee; }
+.navbar-brand { font-weight: 800; color: var(--primary) !important; }
+.navbar-brand span { color: var(--accent); }
 
-/* Hero Section */
+/* Hero */
 .hero {
-    background: linear-gradient(135deg, var(--main-blue) 0%, #002341 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, #002d52 100%);
     color: white;
     padding: 140px 0 80px;
 }
-.hero h1 { font-size: 52px; font-weight: 800; margin-bottom: 10px; }
-.subtitle { font-size: 20px; font-weight: 300; opacity: 0.9; }
-.contact-info { margin: 25px 0; font-size: 15px; }
-.contact-info span { margin: 0 15px; opacity: 0.8; }
+.hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 15px; }
 
-/* Bouton CTA */
-.btn-cta {
-    background: var(--accent-blue);
-    color: white;
-    border-radius: 50px;
-    padding: 12px 35px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.3s;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
-}
-.btn-cta:hover { background: white; color: var(--main-blue); transform: translateY(-3px); }
-
-/* Cartes Expertise */
-.skill-card {
-    background: white;
-    padding: 40px 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    margin-top: 20px;
-    transition: 0.3s;
-    text-align: center;
-}
-.skill-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-.skill-card i { font-size: 45px; color: var(--main-blue); margin-bottom: 20px; }
-
-/* Job Items */
-.job-item {
+/* Cards */
+.job-card, .edu-card {
     background: white;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 25px;
-    border-left: 6px solid var(--main-blue);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary);
 }
+
 .job-header { display: flex; justify-content: space-between; align-items: center; }
-.badge-date { background: #ebf2f7; color: var(--main-blue); padding: 5px 15px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+.badge-date { background: #eef4f9; color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+.role { color: var(--accent); font-weight: 600; margin-top: 5px; }
 
-/* Multi-langue */
+/* Buttons */
+.btn-cta {
+    background: var(--accent);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.btn-cta:hover { background: white; color: var(--primary); transform: translateY(-3px); }
+
+/* Language Helper */
 [data-lang] { display: none; }
-
-/* Espacements */
 .py-5 { padding: 80px 0; }
 .bg-grey { background-color: var(--bg-light); }
-.title-center { font-weight: 800; font-size: 32px; color: var(--main-blue); margin-bottom: 50px; text-align: center; }
+.title-center { margin-bottom: 50px; color: var(--primary); font-weight: 700; text-align: center; }
