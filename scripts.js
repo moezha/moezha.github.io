@@ -1,28 +1,27 @@
 function setLanguage(lang) {
-    // Affiche les éléments de la langue choisie
+    // Masquer tous les éléments avec data-lang
     $('[data-lang]').hide();
+    // Afficher uniquement ceux de la langue sélectionnée
     $('[data-lang="' + lang + '"]').show();
     
-    // Si c'est un span, on utilise display inline
-    $('[data-lang="' + lang + '"]').each(function() {
-        if ($(this).prop("tagName") === "SPAN") {
-            $(this).css("display", "inline");
-        } else {
-            $(this).css("display", "block");
-        }
-    });
-
-    // Mise à jour du lien du CV
-    var fileName = "CV_MOEZ_2026_DEVOPS_" + lang.toUpperCase() + ".pdf";
+    // Mettre à jour le nom du fichier CV dynamiquement
+    var fileName = "CV_Hachicha_Moez_" + lang.toUpperCase() + ".pdf";
     $('#downloadBtn').attr('href', fileName);
     
+    // Sauvegarder la préférence
     localStorage.setItem('prefLang', lang);
 }
 
 $(document).ready(function() {
+    // Détection auto de la langue du navigateur
     var userLang = navigator.language || navigator.userLanguage;
-    // Anglais par défaut si pas de préférence sauvegardée
-    var defaultLang = localStorage.getItem('prefLang') || 'en'; 
+    var defaultLang = localStorage.getItem('prefLang');
+    
+    if (!defaultLang) {
+        if (userLang.startsWith('fr')) defaultLang = 'fr';
+        else if (userLang.startsWith('de')) defaultLang = 'de';
+        else defaultLang = 'en';
+    }
     
     setLanguage(defaultLang);
 });

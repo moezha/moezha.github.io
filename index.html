@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moez Hachicha | Cloud Integration Engineer</title>
+    <title>Moez Hachicha | Senior Cloud Integration Engineer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,8 +18,8 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="javascript:void(0)" onclick="setLanguage('en')">EN</a></li>
                     <li><a href="javascript:void(0)" onclick="setLanguage('fr')">FR</a></li>
+                    <li><a href="javascript:void(0)" onclick="setLanguage('en')">EN</a></li>
                     <li><a href="javascript:void(0)" onclick="setLanguage('de')">DE</a></li>
                 </ul>
             </div>
@@ -28,86 +28,150 @@
 
     <header class="hero">
         <div class="container text-center">
-            <h1>Moez Hachicha</h1>
+            <h1 class="fade-in">Moez Hachicha</h1>
             <p class="subtitle">
-                <span data-lang="en">Cloud Integration Engineer | GCP & DevOps Specialist</span>
-                <span data-lang="fr">Ingénieur Intégration Cloud | Spécialiste GCP & DevOps</span>
-                <span data-lang="de">Cloud Integration Engineer | GCP & DevOps Spezialist</span>
+                <span data-lang="fr">Ingénieur Intégration Cloud Senior | Expert GCP & DevOps</span>
+                <span data-lang="en">Senior Cloud Integration Engineer | GCP & DevOps Expert</span>
+                <span data-lang="de">Senior Cloud Integration Engineer | GCP & DevOps Experte</span>
             </p>
-            <div class="contact-info">
-                <span><i class="fa fa-map-marker"></i> Sfax, Tunisia</span>
-                <span><i class="fa fa-whatsapp"></i> +49 177 1805599</span>
+            <div class="contact-links">
+                <a href="mailto:moez.hachicha@enis.tn"><i class="fa fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com/in/moezha" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/moezha" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                <span><i class="fa fa-map-marker"></i> Sfax, Tunisia / +49 177 1805599</span>
             </div>
             <a id="downloadBtn" href="#" class="btn btn-cta">
                 <i class="fa fa-download"></i>
-                <span data-lang="en">Download CV</span>
                 <span data-lang="fr">Télécharger CV</span>
+                <span data-lang="en">Download CV</span>
                 <span data-lang="de">CV Herunterladen</span>
             </a>
         </div>
     </header>
 
-    <section id="career" class="py-5">
+    <section id="expertise" class="py-5">
         <div class="container">
-            <h2 class="title-center"><span data-lang="en">Professional Experience</span><span data-lang="fr">Expérience Professionnelle</span><span data-lang="de">Berufserfahrung</span></h2>
-            
-            <div class="job-card">
-                <div class="job-header">
-                    <h3>Devoteam (Client: Carrefour Group)</h3>
-                    <span class="badge-date">Sept. 2025 – Present</span>
+            <h2 class="title-center">Expertise</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <i class="fa fa-cloud"></i>
+                        <h3>Cloud & IaC</h3>
+                        <p>GCP (GKE, Cloud Run), Azure, Terraform, Ansible, Helm.</p>
+                    </div>
                 </div>
-                <p class="role">Senior DevOps Engineer (Cloud & Production)</p>
-                <ul class="details-list" data-lang="en">
-                    <li>Leading administration of complex Azure & GCP environments (90% automated via Terraform).</li>
-                    <li>Implemented HashiCorp Vault for secrets management (reduced manual tasks by 40%).</li>
-                    <li>Optimized CI/CD pipelines (Jenkins, GitLab CI) for Transport & IO modules.</li>
-                </ul>
-                <ul class="details-list" data-lang="fr">
-                    <li>Direction de l'administration d'environnements Azure & GCP (90% automatisé via Terraform).</li>
-                    <li>Mise en œuvre de HashiCorp Vault (réduction de 40% des tâches manuelles).</li>
-                    <li>Optimisation des pipelines CI/CD (Jenkins, GitLab CI) pour les modules Transport & IO.</li>
-                </ul>
-            </div>
-
-            <div class="job-card">
-                <div class="job-header">
-                    <h3>Sofrecom (Client: Orange Group)</h3>
-                    <span class="badge-date">Jan. 2022 – Sept. 2025</span>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <i class="fa fa-terminal"></i>
+                        <h3>DevOps</h3>
+                        <p>GitLab CI, Jenkins, Docker, Kubernetes, HashiCorp Vault.</p>
+                    </div>
                 </div>
-                <p class="role">Software & Cloud Engineer</p>
-                <ul class="details-list" data-lang="en">
-                    <li>Designed scalable architectures on GKE and Cloud Run with WIF security.</li>
-                    <li>Integrated Vertex AI and Cloud SQL into automated data processing workflows.</li>
-                    <li>Reduced incident response time by 25% via Google Cloud Monitoring dashboards.</li>
-                </ul>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <i class="fa fa-code"></i>
+                        <h3 data-lang="fr">Développement</h3><h3 data-lang="en">Development</h3><h3 data-lang="de">Entwicklung</h3>
+                        <p>Python, Node.js, Java Spring Boot, Kafka, Vertex AI.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="py-5 bg-grey">
+    <section id="career" class="py-5 bg-grey">
         <div class="container">
-            <h2 class="title-center"><span data-lang="en">Education</span><span data-lang="fr">Formation</span><span data-lang="de">Bildungsweg</span></h2>
+            <h2 class="title-left">
+                <span data-lang="fr">Parcours Professionnel</span>
+                <span data-lang="en">Professional Experience</span>
+                <span data-lang="de">Beruflicher Werdegang</span>
+            </h2>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <h4>Devoteam <small>(Client: Carrefour Group)</small></h4>
+                    <span class="badge-date">2025 - <span data-lang="fr">Présent</span><span data-lang="en">Present</span><span data-lang="de">Heute</span></span>
+                </div>
+                <p class="job-role">Senior DevOps Engineer (Cloud & Production)</p>
+                <div class="job-desc">
+                    <ul data-lang="fr">
+                        <li>Administration Cloud (Azure/GCP) : automatisation de 90% du provisioning via Terraform.</li>
+                        <li>Sécurité : Implémentation de HashiCorp Vault, réduction des interventions manuelles de 40%.</li>
+                        <li>Pipelines CI/CD : Optimisation sur Jenkins et GitLab CI pour les modules Transport.</li>
+                    </ul>
+                    <ul data-lang="en">
+                        <li>Cloud Admin (Azure/GCP): Automated 90% of provisioning via modular Terraform.</li>
+                        <li>Security: Implemented HashiCorp Vault, reducing manual interventions by 40%.</li>
+                        <li>CI/CD: Optimized Jenkins and GitLab CI pipelines for enterprise Transport modules.</li>
+                    </ul>
+                    <ul data-lang="de">
+                        <li>Cloud-Admin (Azure/GCP): 90% Automatisierung der Provisionierung über Terraform.</li>
+                        <li>Sicherheit: Implementierung von HashiCorp Vault, Reduzierung manueller Eingriffe um 40%.</li>
+                        <li>CI/CD: Optimierung von Jenkins- und GitLab CI-Pipelines für Transport-Module.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <h4>Sofrecom <small>(Client: Orange Group)</small></h4>
+                    <span class="badge-date">2022 - 2025</span>
+                </div>
+                <p class="job-role">Software & Cloud Engineer</p>
+                <div class="job-desc">
+                    <ul data-lang="fr">
+                        <li>Architecture GKE/Cloud Run avec Workload Identity Federation (WIF).</li>
+                        <li>IA : Intégration de Vertex AI et Document AI pour l'extraction de données.</li>
+                        <li>Observabilité : Monitoring Google Cloud, réduction de 25% du temps de réponse aux incidents.</li>
+                    </ul>
+                    <ul data-lang="en">
+                        <li>Built GKE/Cloud Run architectures with Workload Identity Federation (WIF).</li>
+                        <li>AI: Integrated Vertex AI and Document AI for automated data extraction pipelines.</li>
+                        <li>Observability: Set up GCP Dashboards, reducing incident response time by 25%.</li>
+                    </ul>
+                    <ul data-lang="de">
+                        <li>GKE/Cloud Run-Architekturen mit Workload Identity Federation (WIF).</li>
+                        <li>KI: Integration von Vertex AI und Document AI für automatisierte Datenextraktion.</li>
+                        <li>Monitoring: Google Cloud Dashboards, 25% schnellere Reaktion auf Vorfälle.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5">
+        <div class="container">
             <div class="row">
                 <div class="col-md-6">
+                    <h2 class="title-left">Education</h2>
                     <div class="edu-card">
-                        <h4>ENIS Sfax</h4>
-                        <p class="date">2019 – 2022</p>
-                        <p><strong><span data-lang="en">National Engineering Diploma in Computer Science</span><span data-lang="fr">Diplôme National d'Ingénieur en Informatique</span></strong></p>
-                        <span class="badge-edu">German Master Equivalence (ZAB)</span>
+                        <div class="edu-icon"><i class="fa fa-graduation-cap"></i></div>
+                        <div class="edu-content">
+                            <h4>ENIS Sfax</h4>
+                            <p class="edu-meta">2019 - 2022</p>
+                            <p><strong><span data-lang="fr">Diplôme d'Ingénieur</span><span data-lang="en">Engineering Degree</span><span data-lang="de">Diplom-Ingenieur</span></strong></p>
+                            <span class="zab-badge"><i class="fa fa-certificate"></i> ZAB Equivalence: German Master</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="edu-card">
-                        <h4>IPEIS Sfax</h4>
-                        <p class="date">2016 – 2019</p>
-                        <p><strong><span data-lang="en">Preparatory Cycle (Math & Physics)</span><span data-lang="fr">Cycle Préparatoire (Math-Physique)</span></strong></p>
-                    </div>
+                    <h2 class="title-left">Certifications</h2>
+                    <ul class="cert-list">
+                        <li><i class="fa fa-google text-primary"></i> GCP DevOps Fundamentals</li>
+                        <li><i class="fa fa-cube text-info"></i> Full-stack Node.js (Docker)</li>
+                        <li><i class="fa fa-language text-danger"></i> German B1 (Zertifikat Deutsch)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer class="py-5 bg-dark text-center">
+        <div class="container">
+            <p>&copy; 2026 Moez Hachicha - Senior Cloud Integration Engineer</p>
+        </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

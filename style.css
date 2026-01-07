@@ -1,52 +1,83 @@
 :root {
-    --primary: #004f90;
-    --accent: #00c6ff;
-    --bg-light: #f8fbfd;
+    --main-blue: #004f90;
+    --accent-blue: #00c6ff;
+    --text-dark: #2d3436;
+    --bg-light: #f4f7f9;
 }
 
-body { font-family: 'Inter', sans-serif; color: #333; }
+body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; }
 
-/* Navbar */
-.navbar { background: #fff; border-bottom: 1px solid #eee; }
-.navbar-brand { font-weight: 800; color: var(--primary) !important; }
-.navbar-brand span { color: var(--accent); }
+/* Navigation */
+.navbar { background: rgba(255,255,255,0.95); border-bottom: 1px solid #ddd; }
+.navbar-brand { font-weight: 800; color: var(--main-blue) !important; }
+.navbar-brand span { color: var(--accent-blue); }
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, var(--primary) 0%, #002d52 100%);
+    background: linear-gradient(135deg, #004f90 0%, #002341 100%);
     color: white;
-    padding: 140px 0 80px;
+    padding: 120px 0 60px;
 }
-.hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 15px; }
-
-/* Cards */
-.job-card, .edu-card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--primary);
-}
-
-.job-header { display: flex; justify-content: space-between; align-items: center; }
-.badge-date { background: #eef4f9; color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; }
-.role { color: var(--accent); font-weight: 600; margin-top: 5px; }
+.hero h1 { font-size: 5rem; font-weight: 800; margin-bottom: 15px; }
+.subtitle { font-size: 2.2rem; opacity: 0.9; margin-bottom: 30px; font-weight: 300; }
+.contact-links { margin-bottom: 30px; }
+.contact-links a, .contact-links span { color: white; margin: 0 15px; text-decoration: none; opacity: 0.8; }
+.contact-links a:hover { opacity: 1; color: var(--accent-blue); }
 
 /* Buttons */
 .btn-cta {
-    background: var(--accent);
+    background: var(--accent-blue);
     color: white;
     border-radius: 50px;
-    padding: 12px 30px;
+    padding: 15px 40px;
     font-weight: 700;
-    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 198, 255, 0.2);
     transition: 0.3s;
 }
-.btn-cta:hover { background: white; color: var(--primary); transform: translateY(-3px); }
+.btn-cta:hover { background: white; color: var(--main-blue); transform: translateY(-3px); }
 
-/* Language Helper */
-[data-lang] { display: none; }
+/* Sections */
 .py-5 { padding: 80px 0; }
 .bg-grey { background-color: var(--bg-light); }
-.title-center { margin-bottom: 50px; color: var(--primary); font-weight: 700; text-align: center; }
+.title-center { text-align: center; font-weight: 800; color: var(--main-blue); margin-bottom: 50px; text-transform: uppercase; letter-spacing: 1px; }
+.title-left { font-weight: 800; color: var(--main-blue); margin-bottom: 30px; }
+
+/* Cards */
+.skill-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    height: 100%;
+}
+.skill-card:hover { transform: translateY(-10px); }
+.skill-card i { font-size: 40px; color: var(--main-blue); margin-bottom: 15px; }
+
+/* Experience */
+.job-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--main-blue);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+.job-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.badge-date { background: #eef2f7; color: var(--main-blue); padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 1.2rem; }
+.job-role { font-weight: 700; color: #555; font-size: 1.6rem; margin-bottom: 15px; }
+
+/* Education & Certs */
+.edu-card { display: flex; align-items: center; background: var(--bg-light); padding: 20px; border-radius: 10px; }
+.edu-icon { font-size: 30px; margin-right: 20px; color: var(--main-blue); }
+.zab-badge { background: #d4edda; color: #155724; padding: 4px 10px; border-radius: 5px; font-size: 1.2rem; font-weight: 600; margin-top: 5px; display: inline-block; }
+.cert-list { list-style: none; padding: 0; }
+.cert-list li { padding: 10px 0; font-size: 1.6rem; border-bottom: 1px solid #eee; }
+.cert-list i { margin-right: 10px; }
+
+/* Footer */
+footer { background: #1a1a1a; color: #777; padding: 40px 0; }
+
+/* Lang Logic */
+[data-lang] { display: none; }
