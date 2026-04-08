@@ -401,35 +401,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts.js"></script>
-    <script>
-        // Map each language to its CV PDF file
-        var cvFiles = {
-            'fr': 'CV_MOEZ_2026_DEVOPS_FR.pdf',
-            'en': 'CV_MOEZ_2026_HACHICHA.pdf',
-            'de': 'CV_MOEZ_2026_DEVOPS_DE.pdf'
-        };
-
-        function updateDownloadBtn(lang) {
-            var btn = document.getElementById('downloadBtn');
-            if (btn && cvFiles[lang]) {
-                btn.href = cvFiles[lang];
-                btn.setAttribute('download', cvFiles[lang]);
-            }
-        }
-
-        // Patch setLanguage to also update the download button
-        var _origSetLanguage = typeof setLanguage === 'function' ? setLanguage : null;
-        function setLanguage(lang) {
-            if (_origSetLanguage) _origSetLanguage(lang);
-            updateDownloadBtn(lang);
-        }
-
-        // Set default language and button on load
-        document.addEventListener('DOMContentLoaded', function () {
-            var defaultLang = 'en';
-            updateDownloadBtn(defaultLang);
-        });
-    </script>
 </body>
 
 </html>
